@@ -1,38 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap");
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Tabs */
+.route {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+    border-radius: 10px;
+    max-width: 130px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.route:hover{
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+.word{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-slide 4s linear infinite;
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+      90deg,
+      #3498db,
+      #00b3ff 43%,
+      #ca57fa 68%,
+      #1174ff 83%
+    );
+    font-family: "Karla", sans-serif;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 800;
   }
+  
+  @keyframes rainbow-slide {
+    0% {
+      background-position: 0 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    to {
+      background-position: 0 50%;
+    }
+}
+@media only screen and (max-width: 990px) {
+  .word
+  {
+    display: flex;
+    justify-content: center;
+    padding-left:300px;
+  }
+
+} 
+  
+@media all and (max-width: 990px) {
+  .footer
+  {
+    padding-right:200px;
+  }
+
+} 
+
+/* Home */
+@-webkit-keyframes home {
+    15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+    }
+    30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+    }
+    40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+    }
+    50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+@keyframes home {
+    15% {
+      -webkit-transform: translateX(9px);
+      transform: translateX(9px);
+    }
+    30% {
+      -webkit-transform: translateX(-9px);
+      transform: translateX(-9px);
+    }
+    40% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+    }
+    50% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    65% {
+      -webkit-transform: translateX(3px);
+      transform: translateX(3px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  
+.home:hover {
+  -webkit-animation: home 0.6s ease;
+  animation: home 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* User Profile */
+.userProfile{
+  margin-top:2px;
+  height: 449px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+/* Posts */
+
+.posts{
+  margin-top:2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:clip;
 }
+
+.lists{
+  border-color: #3498db;
+}
+
+.dataButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 0;
+    background-color: #3498db;
+}
+
+/* Footer */
+
+.footer{
+  margin:auto;
+  height: 11vh;
+  background-color: #212529;
+  color:#3498db;
+  padding-top: 20px ;
+  text-align: center;
+}
+
+/* Content */
+
